@@ -1,4 +1,5 @@
 import argparse
+import json
 import requests
 
 parser = argparse.ArgumentParser(
@@ -9,5 +10,4 @@ parser.add_argument("-l", "--level", required=True)
 args = parser.parse_args()
 
 lvl_id = int(args.level)
-response = requests.get("https://5beam.zelo.dev/api/level?id=%i" % lvl_id)
-print(response.text)
+response = requests.get("https://5beam.zelo.dev/api/level?id=%i" % lvl_id).json
