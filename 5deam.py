@@ -10,4 +10,7 @@ parser.add_argument("-l", "--level", required=True)
 args = parser.parse_args()
 
 lvl_id = int(args.level)
-response = requests.get("https://5beam.zelo.dev/api/level?id=%i" % lvl_id).json
+response = requests.get("https://5beam.zelo.dev/api/level?id=%i" % lvl_id).json()
+
+data = response['data']
+print(data)
