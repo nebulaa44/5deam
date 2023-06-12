@@ -5,7 +5,7 @@ parser = argparse.ArgumentParser(
     prog="5deam",
     description="5beam client")
 
-parser.add_argument("-l", "--level")
+parser.add_argument("-l", "--level", required=True)
 args = parser.parse_args()
 
 lvl_id = int(args.level)
