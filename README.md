@@ -11,3 +11,5 @@ This is a command-line tool that outputs level data for a given level id.
 ```
 
 The level string can then be added manually to the levels.txt file. **Automatic saving to levels.txt will be added soon(TM)**
+
+The levels.txt file also **must** be saved in the Windows-1252 encoding, or else the walkable wooden block will fail to render.
