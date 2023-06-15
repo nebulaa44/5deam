@@ -6,4 +6,6 @@
 
 This is a command-line tool that outputs level data for a given level id.
 
-```5deam.py --level {{levelid}}'''
+```
+5deam.py --level {{levelid}}
+```
