@@ -1,9 +1,9 @@
 # 5deam
 
-5deam is a 5beam client that can download levels into a level.txt file for use with BFDIA 5b.
+5deam is a 5beam client that allows for downloading levels without the use of HTML5b.
 
 ## Usage
 
-This command will overwrite levels.txt, so it is reccomended that you make a backup.
+This is a command-line tool that outputs level data for a given level id.
 
-```5deam.py --level {{levelid}} > levels.txt
+```5deam.py --level {{levelid}}'''
