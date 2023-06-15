@@ -1,5 +1,4 @@
 import argparse
-import json
 import requests
 
 parser = argparse.ArgumentParser(
