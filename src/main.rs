@@ -15,7 +15,7 @@ async fn main() -> Result<() ,Box<dyn std::error::Error>>
 {
     let args = Args::parse();
 
-    let resp = api::get_level(args.id).await?;
+    let resp = api::get_level(args.id).await?.data;
     println!("{resp}");
 
     Ok(())
