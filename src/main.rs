@@ -1,5 +1,5 @@
 mod api;
-mod init_levels;
+mod levels_txt;
 
 use clap::Parser;
 
@@ -25,7 +25,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>>
 
     if args.generate_levels != "" 
     {
-        init_levels::init_levels();
+        levels_txt::init_levels();
     }
 
     if args.id != 0
