@@ -9,3 +9,4 @@ description = "Reserved for future use."
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+reqwest = "0.11.18"
