@@ -9,5 +9,6 @@ description = "Reserved for future use."
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+clap = { version = "4.3.4", features = ["derive"] }
 reqwest = "0.11.18"
 tokio = { version = "1.28.2", features = ["rt", "macros"] }
