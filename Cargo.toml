@@ -2,6 +2,9 @@
 name = "deam"
 version = "0.1.0"
 edition = "2021"
+repository = "github.com/nebulaa44/5deam"
+license = "MIT"
+description = "Reserved for future use."
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
