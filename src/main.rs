@@ -10,8 +10,8 @@ struct Args
     //? These should probably be subcommands
 
     /// Creates a new levels.txt at the given path
-    #[arg(short, long, default_value_t = format!(""))]
-    generate_levels: String,
+    #[arg(short, long)]
+    generate_levels: bool,
 
     /// Level ID to download
     #[arg(short, long, default_value_t = 0)]
@@ -23,15 +23,15 @@ async fn main() -> Result<(), Box<dyn std::error::Error>>
 {
     let args = Args::parse();
 
-    if args.generate_levels != "" 
+    if args.generate_levels
     {
-        levels_txt::init_levels();
+        levels_txt::init_levels().unwrap();
     }
 
     if args.id != 0
     {
-        let resp = api::get_level(args.id).await?.data;
-        println!("{resp}");
+        let resp = api::get_level(args.id).await?.data + "\r\n\r\n";
+        levels_txt::add_level(resp)?;
     }
     Ok(())
 }
