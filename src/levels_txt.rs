@@ -24,14 +24,11 @@ pub fn init_levels() -> std::io::Result<()>
         template.push_str(EMPTY_LEVEL);
     }
 
-    levels_txt.write(template.as_bytes()).unwrap();
+    levels_txt.write_all(template.as_bytes()).unwrap();
     Ok(())
 }
 
-pub fn add_level(level_string: String) -> Result<(), Box<dyn Error>>
+pub fn add_level(_level_string: String) -> Result<(), Box<dyn Error>>
 {
-    let mut levels_txt = fs::read("levels.txt")?;
-
-    std::fs::write("levels.txt", levels_txt)?;
-    Ok(())
+    unimplemented!();
 }
