@@ -1,5 +1,5 @@
 use std::error::Error;
-use std::fs::{File, OpenOptions};
+use std::fs::{self, File, OpenOptions};
 use std::io::Write;
 
 const EMPTY_LEVEL: &str = "empty\r\n32,18,00,00,L\r\n................................\r\n................................\r\n................................\r\n................................\r\n................................\r\n................................\r\n................................\r\n................................\r\n................................\r\n................................\r\n................................\r\n................................\r\n................................\r\n................................\r\n................................\r\n................................\r\n................................\r\n................................\r\n00\r\n000000\r\n\r\n";
@@ -30,9 +30,8 @@ pub fn init_levels() -> std::io::Result<()>
 
 pub fn add_level(level_string: String) -> Result<(), Box<dyn Error>>
 {
-    let mut levels_txt = std::fs::read_to_string("levels.txt")?;
-    levels_txt = levels_txt.replacen(EMPTY_LEVEL, &level_string, 1);
+    let mut levels_txt = fs::read("levels.txt")?;
 
-    std::fs::write("levels.txt", levels_txt.as_bytes())?;
+    std::fs::write("levels.txt", levels_txt)?;
     Ok(())
 }
