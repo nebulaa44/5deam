@@ -7,7 +7,7 @@
 This is a command-line tool that outputs level data for a given level id.
 
 ```
-deam --level {{levelid}}
+deam --id {{levelid}}
 ```
 
 The level string can then be added manually to the levels.txt file. **Automatic saving to levels.txt will be added soon(TM)**
