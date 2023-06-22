@@ -40,7 +40,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>>
             println!("{resp}");
         }
 
-        levels_txt::add_level(resp)?;
+        //levels_txt::add_level(resp)?;
     }
     Ok(())
 }
