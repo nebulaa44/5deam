@@ -2,7 +2,7 @@
 name = "deam"
 version = "0.0.0"
 edition = "2021"
-repository = "http://github.com/nebulaa44/5deam"
+repository = "https://github.com/nebulaa44/5deam"
 license = "MIT"
 description = "Reserved for future use."
 
